@@ -1,115 +1,238 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Project 1 - Game Cards</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500&family=Alegreya+Sans:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500&family=Alegreya+Sans:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
 
     <style>
+      body {
+        background-color: #cccccc;
+        color: #cccccc;
+        font-family: "Albert Sans", sans-serif;
+      }
 
-        body {
-            background-color: #CCCCCC;
-            font-family: 'Albert Sans', sans-serif;
-        }
+      .container {
+        background: linear-gradient(
+          180deg,
+          rgba(32, 13, 37, 1) 0%,
+          rgba(67, 22, 75, 1) 50%,
+          rgba(99, 30, 111, 1) 100%
+        );
+        border-radius: 8px;
+        margin: auto;
+        width: 780px;
+      }
 
-        .container {
-            background: linear-gradient(180deg, rgba(32,13,37,1) 0%, rgba(67,22,75,1) 50%, rgba(99,30,111,1) 100%);
-            border-radius: 8px;;
-            margin: auto;
-            width: 780px;
-        }
+      .header {
+        padding: 20px;
+        text-align: center;
+        font-size: 17px;
+        font-weight: 500;
+      }
 
-        .header {
-            padding: 20px;
-            text-align: center;
-            color: #CCCCCC;
-            font-size: 17px;
-            font-weight: 500;
-        }
+      .header-title {
+        color: #fecd23;
+        font-family: "Press Start 2P", cursive;
+        margin-bottom: 32px;
+      }
 
-        .header-title {
-            color: #FECD23;
-            font-family: 'Press Start 2P', cursive;;
-            margin-bottom: 32px;
-        }
+      .header-text-1 {
+        margin: 14px;
+      }
 
-        .header-text-1 {
-            margin: 14px;
-        }
+      .header-text-2 {
+        margin-bottom: 15px;
+      }
 
-        .header-text-2 {
-            margin-bottom: 15px;
-        }
+      .flex-container {
+        background: linear-gradient(
+          180deg,
+          rgba(99, 30, 111, 1) 0%,
+          rgba(67, 22, 75, 1) 50%,
+          rgba(32, 13, 37, 1) 100%
+        );
+        border-radius: 8px;
 
-        .flex-container {
-            background: linear-gradient(180deg, rgba(99,30,111,1) 0%, rgba(67,22,75,1) 50%, rgba(32,13,37,1) 100%);
-            border-radius: 8px;
+        text-align: center;
 
-            text-align: center;
-            
-            margin: auto;
-            width: 730px;
-            
-        }
+        margin: auto;
+        width: 730px;
+      }
 
-        .data-entry {
-            color: #CCCCCC;
-            font-size: 26px;
-            font-weight: 500;
+      .data-entry {
+        font-size: 26px;
+        font-weight: 500;
 
-            padding: 14px;
-        }
+        padding: 14px;
+      }
 
-        .cards-container {
-            display: flex;
-            justify-content: space-around;
-        }
+      .cards-container {
+        display: flex;
+        justify-content: space-around;
+      }
 
-        .footer {
-            color: #CCCCCC;
-            padding: 8px;
-            text-align: center;
-            font-size: 12px;
-        }
+      .border-card-1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(
+          180deg,
+          rgba(38, 55, 218, 1) 0%,
+          rgba(52, 41, 136, 1) 50%
+        );
+        width: 26%;
+        margin-bottom: 16px;
+        border-radius: 6px;
+      }
 
+      .card-1 {
+        background: linear-gradient(
+          180deg,
+          rgba(64, 99, 239, 1) 0%,
+          rgba(116, 206, 254, 1) 50%
+        );
+        width: 90%;
+        height: 92%;
+      }
+
+      .sports {
+        font-size: 18px;
+        font-weight: 500;
+      }
+
+      .border-card-2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(
+          180deg,
+          rgba(38, 55, 218, 1) 0%,
+          rgba(52, 41, 136, 1) 50%
+        );
+        width: 26%;
+        margin-bottom: 16px;
+        border-radius: 6px;
+      }
+
+      .card-2 {
+        background: linear-gradient(
+          180deg,
+          rgba(64, 99, 239, 1) 0%,
+          rgba(116, 206, 254, 1) 50%
+        );
+        width: 90%;
+        height: 92%;
+      }
+
+      .simulation {
+        font-size: 18px;
+        font-weight: 500;
+      }
+
+      .border-card-3 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(
+          180deg,
+          rgba(38, 55, 218, 1) 0%,
+          rgba(52, 41, 136, 1) 50%
+        );
+        width: 26%;
+        margin-bottom: 16px;
+        border-radius: 6px;
+      }
+
+      .card-3 {
+        background: linear-gradient(
+          180deg,
+          rgba(64, 99, 239, 1) 0%,
+          rgba(116, 206, 254, 1) 50%
+        );
+        width: 90%;
+        height: 92%;
+      }
+
+      .strategy {
+        font-size: 18px;
+        font-weight: 500;
+      }
+
+      .footer {
+        padding: 8px;
+        text-align: center;
+        font-size: 12px;
+      }
     </style>
-
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <div class="header">
-            <div class="header-title">GAMES LOVERS ENQUETE</div>
-            <div class="header-subtitle">Estamos escolhendo nessa enquete os melhores estilos de jogos entre os afixionados por video games. Participe da nossa enquete e escola entre os três finalistas!</div>
-            <div class="header-text-1">A sua escolha é muito importante para nós.</div>
-            <div class="header-text-2">No final da enquete iremos sortear um <strong>brinde</strong> entre os participantes.</div>
+      <div class="header">
+        <div class="header-title">GAMES LOVERS ENQUETE</div>
+        <p class="header-subtitle">
+          Estamos escolhendo nessa enquete os melhores estilos de jogos entre os
+          afixionados por video games. Participe da nossa enquete e escola entre
+          os três finalistas!
+        </p>
+        <p class="header-text-1">A sua escolha é muito importante para nós.</p>
+        <p class="header-text-2">
+          No final da enquete iremos sortear um <strong>brinde</strong> entre os
+          participantes.
+        </p>
+      </div>
+      <div class="flex-container">
+        <p class="data-entry">
+          Digite os seus dados e escolha entre os três finalistas!
+        </p>
+        <div class="cards-container">
+          <div class="border-card-1">
+            <div class="card-1">
+              <p class="sports">Esportes</p>
+              <object
+                data="./assets/sports_soccer_white.svg"
+                type="image/svg+xml"
+              ></object>
+              <p></p>
+            </div>
+          </div>
+
+          <div class="border-card-2">
+            <div class="card-2">
+              <p class="simulation">Simulação</p>
+              <object
+                data="./assets/local_airport_white.svg"
+                type="image/svg+xml"
+              ></object>
+            </div>
+          </div>
+
+          <div class="border-card-3">
+            <div class="card-3">
+              <p class="strategy">Estratégia</p>
+              <object
+                data="./assets/psychology_white.svg"
+                type="image/svg+xml"
+              ></object>
+            </div>
+          </div>
         </div>
-        <div class="flex-container">
-            <div class="data-entry">Digite os seus dados e escolha entre os três finalistas!</div>
-                <div class="cards-container">
-                    <div>
-                    Card 1
-                    </div>
-                    <div>
-                    Card 2
-                    </div>
-                    <div>
-                    Card 3
-                    </div>
-                </div>
-        </div>
-        <div class="footer">@Desenvolvido por GameTechLover</div>
+      </div>
+      <div class="footer">@Desenvolvido por GameTechLover</div>
     </div>
-</body>
+  </body>
 </html>
