@@ -3,25 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Project 1 - Game Cards</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500&family=Alegreya+Sans:wght@400;500&display=swap" rel="stylesheet">
+
+    <style>
+
+        body {
+            background-color: #CCCCCC;
+            font-family: 'Albert Sans', sans-serif;
+        }
+
+        .container {
+            background: linear-gradient(180deg, rgba(32,13,37,1) 0%, rgba(67,22,75,1) 50%, rgba(99,30,111,1) 100%);
+            border-radius: 8px;;
+            margin: auto;
+            width: 780px;
+        }
+
+        .header {
+            padding: 20px;
+            text-align: center;
+            color: #CCCCCC;
+            font-size: 17px;
+            font-weight: 500;
+        }
+
+        .header-title {
+            color: #FECD23;
+            font-family: 'Press Start 2P', cursive;;
+            margin-bottom: 32px;
+        }
+
+        .header-text-1 {
+            margin: 14px;
+        }
+
+        .header-text-2 {
+            margin-bottom: 15px;
+        }
+
+        .flex-container {
+            background: linear-gradient(180deg, rgba(99,30,111,1) 0%, rgba(67,22,75,1) 50%, rgba(32,13,37,1) 100%);
+            border-radius: 8px;
+
+            text-align: center;
+            
+            margin: auto;
+            width: 730px;
+            
+        }
+
+        .data-entry {
+            color: #CCCCCC;
+            font-size: 26px;
+            font-weight: 500;
+
+            padding: 14px;
+        }
+
+        .cards-container {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .footer {
+            color: #CCCCCC;
+            padding: 8px;
+            text-align: center;
+            font-size: 12px;
+        }
+
+    </style>
+
 </head>
 <body>
-    <div>
-        <div>
-            Games Lovers Enquete
+    <div class="container">
+        <div class="header">
+            <div class="header-title">GAMES LOVERS ENQUETE</div>
+            <div class="header-subtitle">Estamos escolhendo nessa enquete os melhores estilos de jogos entre os afixionados por video games. Participe da nossa enquete e escola entre os três finalistas!</div>
+            <div class="header-text-1">A sua escolha é muito importante para nós.</div>
+            <div class="header-text-2">No final da enquete iremos sortear um <strong>brinde</strong> entre os participantes.</div>
         </div>
-        <div>
-            Digite os seus dados e escolha entre os três finalistas!
-            <div>
-                Esportes
-            </div>
-            <div>
-                Simulação
-            </div>
-            <div>
-                Estratégia
-            </div>
+        <div class="flex-container">
+            <div class="data-entry">Digite os seus dados e escolha entre os três finalistas!</div>
+                <div class="cards-container">
+                    <div>
+                    Card 1
+                    </div>
+                    <div>
+                    Card 2
+                    </div>
+                    <div>
+                    Card 3
+                    </div>
+                </div>
         </div>
+        <div class="footer">@Desenvolvido por GameTechLover</div>
     </div>
 </body>
 </html>
